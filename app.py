@@ -29,6 +29,7 @@ os.system(f"git clone https://github.com/ashen-sensored/stable-diffusion-webui-t
 os.system(f"git clone -b dev https://github.com/camenduru/SadTalker /home/demo/source/stable-diffusion-webui/extensions/SadTalker")
 os.system(f"git -C /home/demo/source/stable-diffusion-webui/extensions/SadTalker/checkpoints clone https://huggingface.co/camenduru/SadTalker")
 
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ogkalu/Comic-Diffusion/resolve/main/comic-diffusion-V2.ckpt -d /home/demo/source/stable-diffusion-webui/models/Stable-diffusion -o comic-diffusion-V2.ckpt")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/69832 -d /home/demo/source/stable-diffusion-webui/models/Stable-diffusion -o disney.safetensors")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_ip2p_fp16.safetensors -d /home/demo/source/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11e_sd15_ip2p_fp16.safetensors")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11e_sd15_shuffle_fp16.safetensors -d /home/demo/source/stable-diffusion-webui/extensions/sd-webui-controlnet/models -o control_v11e_sd15_shuffle_fp16.safetensors")
